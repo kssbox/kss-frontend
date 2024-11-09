@@ -1,0 +1,8 @@
+dist/*
+docs-dist/*
+public/*
+node_modules/*
+**/*.js
+**/*.jsx
+**/*.tsx
+**/*.md

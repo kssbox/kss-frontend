@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "dist",
+    "target": "es6",
+    "lib": [
+      "ES2016",
+      "DOM",
+      "es6",
+      "ES2017",
+      "ES2019"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "strict": true,
+    "paths": {
+      "@kss-frontend/*": ["packages/*"],
+      "@@/*": [".dumi/tmp/*"]
+    },
+    "typeRoots": ["typings", "node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "dist"
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    "typings",
+    "test",
+    "docs",
+    "tests",
+    "demos",
+    "**/demos/**.ts",
+    "**/demos/**.tsx",
+    "**/demos/**/*.ts",
+    "**/demos/**/*.tsx",
+    "**/__test__/**.tsx",
+    "**/__test__/**.ts",
+  ]
+}

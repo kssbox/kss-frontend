@@ -1,0 +1,30 @@
+{
+  "name": "@kss-frontend/lint",
+  "version": "0.0.1",
+  "description": "kssbox 的风格校验模块提供 TypeScript 和 CSS 的代码风格校验规则，以保证每行代码都符合风格标准",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@kss-frontend/eslint-plugin": "0.0.1",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "eslint": "8.27.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.10",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "postcss": "8.4.18",
+    "postcss-less": "6.0.0",
+    "prettier": "2.7.1",
+    "stylelint": "14.14.0",
+    "stylelint-config-css-modules": "4.1.0",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-standard": "25.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.5.0",
+    "stylelint-order": "5.0.0"
+  }
+}
