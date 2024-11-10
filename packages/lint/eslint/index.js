@@ -64,7 +64,7 @@ module.exports = {
         ]
       }
     ],
-    '@typescript-eslint/no-unused-vars': ['off'],
+    '@typescript-eslint/no-unused-vars': ['error'],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/no-explicit-any': ['error'],
     'react/display-name': 'off',

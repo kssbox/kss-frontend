@@ -4,7 +4,7 @@ import path from 'path';
 const ESLINT_EXTENSIONS = ['js', 'jsx', 'ts', 'tsx'];
 const STYLELINT_EXTENSIONS = ['css', 'less'];
 
-export interface ILinterOptions {
+export interface ILinterOptions  {
   cwd: string;
 }
 
