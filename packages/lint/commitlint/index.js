@@ -8,7 +8,7 @@ module.exports = {
     'body-empty': [2, 'always'],
     'footer-empty': [2, 'always'],
 
-    'type-enum': [2, 'always', ['feat', 'fix', 'perf', 'docs', 'style', 'refactor', 'test', 'chore']]
+    'type-enum': [2, 'always', ['feat', 'ci', 'fix', 'perf', 'docs', 'style', 'refactor', 'test', 'chore']]
   },
   prompt: {
     questions: {
@@ -17,6 +17,9 @@ module.exports = {
         enum: {
           feat: {
             description: '新功能'
+          },
+          ci: {
+            description: 'ci 相关功能'
           },
           fix: {
             description: '修复 bug'
