@@ -5,11 +5,14 @@
   "scripts": {
     "build": "rollup -c"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@kss-frontend/eslint-plugin": "workspace:*",
+    "@kss-frontend/eslint-plugin": "^0.0.1",
     "@types/node": "^22.9.0",
     "@typescript-eslint/eslint-plugin": "6.13.2",
     "@typescript-eslint/parser": "6.13.2",
@@ -27,5 +30,6 @@
     "stylelint-config-standard": "25.0.0",
     "stylelint-declaration-block-no-ignored-properties": "2.5.0",
     "stylelint-order": "5.0.0"
-  }
+  },
+  "gitHead": "826b8e39fcd240d7ec191b12ae868f62c8715868"
 }
