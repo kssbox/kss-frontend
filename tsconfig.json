@@ -22,7 +22,6 @@
     "strict": true,
     "paths": {
       "@kss-frontend/*": ["packages/*"],
-      "@@/*": [".dumi/tmp/*"]
     },
     "typeRoots": ["typings", "node_modules/@types"],
     "allowSyntheticDefaultImports": true,
