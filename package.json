@@ -6,6 +6,7 @@
   "scripts": {
     "build": "lerna run build",
     "lint-staged": "lint-staged",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -l",
     "prepare": "husky"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-url": "^8.0.1",
     "@svgr/rollup": "^6.5.1",
+    "conventional-changelog-cli": "^5.0.0",
     "husky": "^9.1.6",
     "lerna": "8.1.9",
     "lint-staged": "^15.2.10",

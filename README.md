@@ -11,3 +11,6 @@ npm install @kss-frontend/lint
 ## TODO
 
 [ ] template
+    - [ ] husky
+    - [ ] lint
+    - [ ] changelog?
