@@ -94,8 +94,8 @@ importers:
   packages/lint:
     dependencies:
       '@kss-frontend/eslint-plugin':
-        specifier: workspace:*
-        version: link:../eslint-plugin
+        specifier: ^0.0.1
+        version: 0.0.1(eslint@8.27.0)
       '@types/node':
         specifier: ^22.9.0
         version: 22.9.0
@@ -147,6 +147,9 @@ importers:
       stylelint-order:
         specifier: 5.0.0
         version: 5.0.0(stylelint@14.14.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
 
 packages:
 
@@ -875,6 +878,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@kss-frontend/eslint-plugin@0.0.1':
+    resolution: {integrity: sha512-yUP1G2TfFQrhWNIV2l+PgM1IOUOCp/diS4qlWAEsCqGjllyyiPoBplf8Syrhoje7BlPv1Cqze4Z1V3TjCesABw==}
+    engines: {node: 14.17.0 || 16.0.0 || >= 18.0.0}
+    peerDependencies:
+      eslint: '>=7'
 
   '@lerna/create@8.1.9':
     resolution: {integrity: sha512-DPnl5lPX4v49eVxEbJnAizrpMdMTBz1qykZrAbBul9rfgk531v8oAt+Pm6O/rpAleRombNM7FJb5rYGzBJatOQ==}
@@ -6871,6 +6880,11 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@kss-frontend/eslint-plugin@0.0.1(eslint@8.27.0)':
+    dependencies:
+      eslint: 8.27.0
+      requireindex: 1.2.0
 
   '@lerna/create@8.1.9(encoding@0.1.13)(typescript@5.6.3)':
     dependencies:

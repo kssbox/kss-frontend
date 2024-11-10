@@ -1,6 +1,6 @@
 {
   "name": "@kss-frontend/lint",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "kssbox 的风格校验模块提供 TypeScript 和 CSS 的代码风格校验规则，以保证每行代码都符合风格标准",
   "scripts": {
     "build": "rollup -c"
@@ -29,7 +29,8 @@
     "stylelint-config-rational-order": "0.1.2",
     "stylelint-config-standard": "25.0.0",
     "stylelint-declaration-block-no-ignored-properties": "2.5.0",
-    "stylelint-order": "5.0.0"
+    "stylelint-order": "5.0.0",
+    "typescript": "^5.6.3"
   },
   "gitHead": "826b8e39fcd240d7ec191b12ae868f62c8715868"
 }
