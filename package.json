@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -24,5 +26,9 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-visualizer": "^5.9.2"
+  },
+  "lint-staged": {
+    "packages/**/*.{mjs,cjs,tsx,ts}": "eslint",
+    "packages/**/*.less": "stylelint"
   }
 }
