@@ -1,6 +1,6 @@
 {
   "name": "@kss-frontend/lint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "kssbox 的风格校验模块提供 TypeScript 和 CSS 的代码风格校验规则，以保证每行代码都符合风格标准",
   "scripts": {
     "build": "rollup -c"
