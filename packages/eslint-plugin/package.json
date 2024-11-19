@@ -1,6 +1,6 @@
 {
   "name": "@kss-frontend/eslint-plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "自定义 lint 规则，保证代码的一致性",
   "keywords": [
     "eslint",
