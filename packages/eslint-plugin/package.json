@@ -1,6 +1,6 @@
 {
   "name": "@kss-frontend/eslint-plugin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "自定义 lint 规则，保证代码的一致性",
   "keywords": [
     "eslint",
@@ -36,7 +36,7 @@
     "npm-run-all": "4.1.5"
   },
   "engines": {
-    "node": "14.17.0 || 16.0.0 || >= 18.0.0"
+    "node": ">= 14.17.0"
   },
   "peerDependencies": {
     "eslint": ">=7"
