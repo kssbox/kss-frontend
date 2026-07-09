@@ -20,6 +20,9 @@ pnpm add @kssbox/ui
 
 ```bash
 pnpm install
+
+pnpm --filter @kssbox/playground dev # --port 5175
+
 pnpm build
 pnpm type-check
 pnpm lint
