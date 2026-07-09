@@ -1,0 +1,13 @@
+{
+  "extends": "@kssbox/tsconfig/react.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@kssbox/ui": ["../../packages/ui/src/index.ts"],
+      "@kssbox/ui/*": ["../../packages/ui/src/*"],
+      "@/*": ["./src/*"]
+    },
+    "noEmit": true
+  },
+  "include": ["src", "vite.config.ts", "eslint.config.mjs"]
+}

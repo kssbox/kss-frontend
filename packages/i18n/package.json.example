@@ -1,0 +1,52 @@
+{
+  "name": "@kssbox/i18n",
+  "version": "1.0.0",
+  "description": "Internationalization library with unified API error handling",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./lang/en.json": "./lang/en.json",
+    "./lang/zh.json": "./lang/zh.json"
+  },
+  "files": [
+    "dist",
+    "lang",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vitest/ui": "^1.0.4",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "keywords": [
+    "i18n",
+    "internationalization",
+    "localization",
+    "translation",
+    "react",
+    "typescript"
+  ],
+  "author": "AiEntry Team",
+  "license": "MIT"
+}

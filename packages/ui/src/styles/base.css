@@ -1,0 +1,228 @@
+/**
+ * Base Theme CSS
+ * 基础变量映射层 - 将分层主题变量映射到 Tailwind 和 shadcn/ui 兼容的变量名
+ * 此文件不包含任何具体主题实现，仅定义变量接口
+ */
+
+@layer theme {
+  :root {
+    /* Tailwind 兼容变量 - 从语义层映射 */
+    --background: var(--surface-background);
+    --foreground: var(--surface-foreground);
+
+    --card: var(--surface-card);
+    --card-foreground: var(--surface-card-foreground);
+
+    --popover: var(--surface-popover);
+    --popover-foreground: var(--surface-popover-foreground);
+
+    --primary: var(--interactive-primary);
+    --primary-foreground: var(--interactive-primary-foreground);
+
+    --secondary: var(--interactive-secondary);
+    --secondary-foreground: var(--interactive-secondary-foreground);
+
+    --muted: var(--surface-muted);
+    --muted-foreground: var(--surface-muted-foreground);
+
+    --accent: var(--surface-accent);
+    --accent-foreground: var(--surface-accent-foreground);
+
+    --destructive: var(--interactive-destructive);
+    --destructive-foreground: var(--interactive-destructive-foreground);
+
+    --border: var(--border-default);
+    --input: var(--input-border);
+    --ring: var(--ring);
+
+    /* Feedback colors */
+    --success: var(--feedback-success);
+    --success-foreground: var(--feedback-success-foreground);
+    --success-background: var(--feedback-success-bg);
+
+    --warning: var(--feedback-warning);
+    --warning-foreground: var(--feedback-warning-foreground);
+    --warning-background: var(--feedback-warning-bg);
+
+    --info: var(--feedback-info);
+    --info-foreground: var(--feedback-info-foreground);
+    --info-background: var(--feedback-info-bg);
+
+    /* Input specific */
+    --input-background: var(--input-filled-bg);
+    --switch-background: var(--switch-bg, var(--surface-muted));
+
+    /* Typography */
+    --font-size: var(--font-size-base);
+    --font-weight-medium: var(--font-weight-medium);
+    --font-weight-normal: var(--font-weight-normal);
+
+    /* Radius - 映射到 Tailwind 的 radius utilities */
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+
+    /* Chart colors - defined in theme files */
+
+    /* Sidebar (shadcn/ui specific) */
+    --sidebar: var(--sidebar-bg);
+    --sidebar-foreground: var(--sidebar-fg);
+    --sidebar-primary: var(--sidebar-primary);
+    --sidebar-primary-foreground: var(--sidebar-primary-fg);
+    --sidebar-accent: var(--sidebar-accent);
+    --sidebar-accent-foreground: var(--sidebar-accent-fg);
+    --sidebar-border: var(--sidebar-border);
+    --sidebar-ring: var(--sidebar-ring);
+  }
+}
+
+/**
+ * @theme inline directive for Tailwind v4
+ * 将 CSS 变量暴露给 Tailwind 的 utilities
+ */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-background: var(--success-background);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-background: var(--warning-background);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-info-background: var(--info-background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/**
+ * Base styles - 应用全局样式
+ */
+@layer base {
+  /* 为所有带 data-theme 的元素应用基础样式 */
+  :where(:root, [data-theme]) {
+    @apply bg-background text-foreground;
+  }
+
+  /* Dark mode color-scheme */
+  :where(:root.dark, [data-theme].dark) {
+    color-scheme: dark;
+  }
+
+  /* Light mode color-scheme */
+  :where(:root:not(.dark), [data-theme]:not(.dark)) {
+    color-scheme: light;
+  }
+
+  /* 为所有子元素应用 border 和 outline 样式 */
+  :where(:root *, [data-theme] *) {
+    @apply border-border outline-ring/50;
+  }
+}
+
+/**
+ * Base typography
+ * 为没有显式 text-* class 的元素应用默认排版
+ */
+@layer base {
+  :where(:root, [data-theme]) :where(
+    :not(:has([class*=' text-'])):not(:has([class^='text-']))
+  ) {
+    h1 {
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--line-height-normal);
+    }
+
+    h2 {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--line-height-normal);
+    }
+
+    h3 {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--line-height-normal);
+    }
+
+    h4 {
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--line-height-normal);
+    }
+
+    p {
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--line-height-normal);
+    }
+
+    label {
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--line-height-normal);
+    }
+
+    button {
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--line-height-normal);
+    }
+
+    input {
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--line-height-normal);
+    }
+  }
+}
+
+/**
+ * Global font-size
+ */
+html,
+:root,
+[data-theme] {
+  font-size: var(--font-size);
+}
+
+/**
+ * ScrollArea overrides
+ * Remove Radix UI's display: table from scroll-area viewport container
+ */
+[data-slot='scroll-area-viewport'] > div {
+  display: block !important;
+}

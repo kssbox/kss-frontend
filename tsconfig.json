@@ -1,48 +1,17 @@
 {
+  "extends": "./packages/tsconfig/base.json",
   "compilerOptions": {
-    "rootDir": "./",
-    "outDir": "dist",
-    "target": "es6",
-    "lib": [
-      "ES2016",
-      "DOM",
-      "es6",
-      "ES2017",
-      "ES2019"
-    ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "jsx": "react",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "noImplicitAny": false,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "strict": true,
-    "paths": {
-      "@kss-frontend/*": ["packages/*"],
-    },
-    "typeRoots": ["typings", "node_modules/@types"],
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "declarationDir": "dist"
+    "noEmit": true,
+    "allowJs": true
   },
-  "exclude": [
-    "node_modules",
-    "lib",
-    "es",
-    "dist",
-    "typings",
-    "test",
-    "docs",
-    "tests",
-    "demos",
-    "**/demos/**.ts",
-    "**/demos/**.tsx",
-    "**/demos/**/*.ts",
-    "**/demos/**/*.tsx",
-    "**/__test__/**.tsx",
-    "**/__test__/**.ts",
+  "include": [
+    "packages/*/src/**/*",
+    "packages/*/stories/**/*",
+    "packages/*/next-env.d.ts",
+    "packages/*/next.config.js",
+    "packages/*/tailwind.config.js",
+    "packages/*/postcss.config.js",
+    "apps/*/src/**/*",
+    "apps/*/vite.config.ts"
   ]
 }

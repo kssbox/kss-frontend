@@ -1,0 +1,61 @@
+{
+  "dataTable": {
+    "pagination": {
+      "rowsPerPage": "每页行数",
+      "page": "第",
+      "of": "/",
+      "selected": "行已选中",
+      "total": "行，合计",
+      "rows": "行",
+      "goToFirstPage": "跳转到第一页",
+      "goToPreviousPage": "上一页",
+      "goToNextPage": "下一页",
+      "goToLastPage": "跳转到最后一页"
+    },
+    "toolbar": {
+      "resetFilters": "重置筛选",
+      "reset": "重置",
+      "filters": "筛选",
+      "toggleFilters": "切换筛选项",
+      "searchFilters": "搜索筛选项"
+    },
+    "view": {
+      "columns": "列",
+      "toggleColumns": "切换列显示",
+      "searchColumns": "搜索列",
+      "noResultsFound": "没有找到列"
+    },
+    "filter": {
+      "clearFilter": "清除{{name}}筛选",
+      "noFiltersFound": "没有找到筛选项",
+      "selected": "个已选",
+      "clearFilters": "清除筛选"
+    },
+    "facetedFilter": {
+      "clearFilter": "清除{{name}}筛选",
+      "noResultsFound": "暂无结果",
+      "selected": "个已选",
+      "clearFilters": "清除筛选"
+    },
+    "dateFilter": {
+      "selectDateRange": "选择日期范围",
+      "selectDate": "选择日期"
+    },
+    "sliderFilter": {
+      "clearFilter": "清除{{name}}筛选",
+      "from": "起始值",
+      "to": "结束值",
+      "sliderLabel": "{{name}}滑块",
+      "clear": "清除"
+    },
+    "columnHeader": {
+      "asc": "升序",
+      "desc": "降序",
+      "resetSort": "清除排序",
+      "hideColumn": "隐藏列"
+    },
+    "empty": "暂无数据",
+    "error": "数据加载失败",
+    "search": "搜索..."
+  }
+}

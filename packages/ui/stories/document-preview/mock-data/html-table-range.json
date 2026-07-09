@@ -1,0 +1,137 @@
+{
+    "range_id": "1876543210987654999",
+    "doc_id": "789",
+    "processing_status": 4,
+    "parse_result": {
+        "doc_id": "789",
+        "metadata": {
+            "parser": "VLMParser",
+            "mime_type": "text/html",
+            "generated_at": 1737216000000,
+            "page_count": 1,
+            "char_count": 850
+        },
+        "blocks": [
+            {
+                "id": "2001",
+                "type": "heading",
+                "content": "Product Comparison Table",
+                "page": 0,
+                "bbox": [
+                    100,
+                    100,
+                    900,
+                    150
+                ],
+                "confidence": 0.95,
+                "attrs": {
+                    "level": 1
+                }
+            },
+            {
+                "id": "2002",
+                "type": "html",
+                "content": "<table><thead><tr><th>Product</th><th>Price</th><th>Rating</th></tr></thead><tbody><tr><td>Laptop A</td><td>$999</td><td>4.5/5</td></tr><tr><td>Laptop B</td><td>$1299</td><td>4.8/5</td></tr><tr><td>Laptop C</td><td>$799</td><td>4.2/5</td></tr></tbody></table>",
+                "page": 0,
+                "bbox": [
+                    100,
+                    180,
+                    900,
+                    450
+                ],
+                "confidence": 0.90,
+                "attrs": {
+                    "html_type": "table"
+                }
+            },
+            {
+                "id": "2003",
+                "type": "text",
+                "content": "The table above shows our top three laptop recommendations with their respective prices and customer ratings.",
+                "page": 0,
+                "bbox": [
+                    100,
+                    480,
+                    900,
+                    580
+                ],
+                "confidence": 0.92
+            }
+        ],
+        "pages": [
+            {
+                "page": 0,
+                "width": 1000,
+                "height": 1414
+            }
+        ],
+        "assets": {}
+    },
+    "edited_parse_result": {
+        "doc_id": "789",
+        "metadata": {
+            "parser": "VLMParser",
+            "mime_type": "text/html",
+            "generated_at": 1737216100000,
+            "page_count": 1,
+            "char_count": 920
+        },
+        "blocks": [
+            {
+                "id": "2001",
+                "type": "heading",
+                "content": "Updated Product Comparison",
+                "page": 0,
+                "bbox": [
+                    100,
+                    100,
+                    900,
+                    150
+                ],
+                "confidence": 0.95,
+                "attrs": {
+                    "level": 1
+                }
+            },
+            {
+                "id": "2002",
+                "type": "html",
+                "content": "<table><thead><tr><th>Product</th><th>Price</th><th>Rating</th><th>Stock</th></tr></thead><tbody><tr><td>Laptop A</td><td>$899</td><td>4.5/5</td><td>In Stock</td></tr><tr><td>Laptop B</td><td>$1299</td><td>4.9/5</td><td>Low Stock</td></tr><tr><td>Laptop C</td><td>$799</td><td>4.2/5</td><td>Out of Stock</td></tr></tbody></table>",
+                "page": 0,
+                "bbox": [
+                    100,
+                    180,
+                    900,
+                    450
+                ],
+                "confidence": 0.90,
+                "attrs": {
+                    "html_type": "table"
+                }
+            },
+            {
+                "id": "2003",
+                "type": "text",
+                "content": "The table above shows our top three laptop recommendations with updated prices, ratings, and stock availability.",
+                "page": 0,
+                "bbox": [
+                    100,
+                    480,
+                    900,
+                    580
+                ],
+                "confidence": 0.92
+            }
+        ],
+        "pages": [
+            {
+                "page": 0,
+                "width": 1000,
+                "height": 1414
+            }
+        ],
+        "assets": {}
+    },
+    "created_at": 1737216000,
+    "updated_at": 1737216100
+}

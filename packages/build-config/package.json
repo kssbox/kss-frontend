@@ -1,0 +1,51 @@
+{
+  "name": "@kssbox/build-config",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Shared build configurations for Kssbox frontend packages.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "vite.js",
+    "vite.d.ts",
+    "tsup.js",
+    "tsup.d.ts"
+  ],
+  "author": "Kevin brother",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kssbox/kss-frontend.git",
+    "directory": "packages/build-config"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "module",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./vite": {
+      "types": "./vite.d.ts",
+      "import": "./vite.js"
+    },
+    "./tsup": {
+      "types": "./tsup.d.ts",
+      "import": "./tsup.js"
+    }
+  },
+  "peerDependencies": {
+    "@vitejs/plugin-react": "^4.0.3",
+    "tsup": "^8.5.0",
+    "vite": "^7.1.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "catalog:",
+    "tsup": "catalog:",
+    "vite": "catalog:"
+  }
+}

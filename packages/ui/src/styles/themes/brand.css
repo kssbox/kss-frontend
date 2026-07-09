@@ -1,0 +1,35 @@
+/**
+ * Brand Tokens — Kssbox
+ * 全局品牌锚点：无论 light/dark 都使用同一组"金熊品牌紫"。
+ * 与官网 marketing 站视觉基因保持一致：
+ *   - 主品牌紫：#9333EA  (Tailwind purple-600)
+ *   - 渐变辅色（仅营销/高光场景）：#6366F1 → #9333EA
+ */
+
+:root,
+[data-theme] {
+  /* 单色锚点 —— CTA / 选中态 / 重要高亮统一使用 */
+  --brand-primary: #9333EA;
+  --brand-primary-hover: #7E22CE;     /* purple-700 */
+  --brand-primary-active: #6B21A8;    /* purple-800 */
+  --brand-primary-foreground: #ffffff;
+
+  /* 渐变辅色（仅营销 / Hero 高光使用，不用于业务按钮） */
+  --brand-gradient-from: #6366F1;     /* indigo-500 */
+  --brand-gradient-to:   #9333EA;     /* purple-600 */
+  --brand-gradient: linear-gradient(135deg, var(--brand-gradient-from) 0%, var(--brand-gradient-to) 100%);
+
+  /* 官网同款深色背景（dark 模式专用，但在此集中定义便于跨主题引用） */
+  --brand-dark-bg-from: #0A0A14;
+  --brand-dark-bg-via:  #13132A;
+  --brand-dark-bg-to:   #0A0A14;
+
+  /* 暗色毛玻璃层 */
+  --brand-dark-surface: rgba(255, 255, 255, 0.04);
+  --brand-dark-surface-strong: rgba(255, 255, 255, 0.07);
+  --brand-dark-border: rgba(255, 255, 255, 0.10);
+  --brand-dark-border-strong: rgba(255, 255, 255, 0.16);
+
+  /* Focus ring 默认指向品牌紫 */
+  --brand-ring: color-mix(in srgb, var(--brand-primary) 60%, transparent);
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "@kssbox/tsconfig/react.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+    // "incremental": true
+  },
+  "include": ["src", "stories", ".storybook"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

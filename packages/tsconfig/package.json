@@ -1,0 +1,23 @@
+{
+  "name": "@kssbox/tsconfig",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Shared TypeScript configurations for Kssbox frontend packages.",
+  "main": "index.js",
+  "files": [
+    "base.json",
+    "react.json",
+    "nextjs.json",
+    "node.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "Kevin brother",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kssbox/kss-frontend.git",
+    "directory": "packages/tsconfig"
+  }
+}

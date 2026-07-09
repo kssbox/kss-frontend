@@ -1,0 +1,232 @@
+{
+    "range_id": "1876543210987654321",
+    "doc_id": "456",
+    "processing_status": 4,
+    "parse_result": {
+        "doc_id": "456",
+        "metadata": {
+            "parser": "VLMParser",
+            "mime_type": "application/pdf",
+            "generated_at": 1737216000000,
+            "page_count": 5,
+            "char_count": 1240
+        },
+        "blocks": [
+            {
+                "id": "1001",
+                "type": "heading",
+                "content": "Introduction to Machine Learning",
+                "page": 0,
+                "bbox": [
+                    100,
+                    100,
+                    900,
+                    180
+                ],
+                "confidence": 0.95,
+                "attrs": {
+                    "level": 1
+                }
+            },
+            {
+                "id": "1002",
+                "type": "text",
+                "content": "Machine learning is a subset of artificial intelligence that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.",
+                "page": 0,
+                "bbox": [
+                    100,
+                    200,
+                    900,
+                    320
+                ],
+                "confidence": 0.92
+            },
+            {
+                "id": "1003",
+                "type": "heading",
+                "content": "Key Concepts",
+                "page": 0,
+                "bbox": [
+                    100,
+                    350,
+                    900,
+                    420
+                ],
+                "confidence": 0.94,
+                "attrs": {
+                    "level": 2
+                }
+            },
+            {
+                "id": "1004",
+                "type": "list",
+                "content": "Supervised Learning\nUnsupervised Learning\nReinforcement Learning",
+                "page": 0,
+                "bbox": [
+                    100,
+                    450,
+                    900,
+                    600
+                ],
+                "confidence": 0.90,
+                "attrs": {
+                    "list_type": "unordered",
+                    "list_items": [
+                        {
+                            "text": "Supervised Learning12"
+                        },
+                        {
+                            "text": "Unsupervised Learning"
+                        },
+                        {
+                            "text": "Reinforcement Learning"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "1005",
+                "type": "text",
+                "content": "Each approach has its own applications and methodologies. Supervised learning uses labeled data, while unsupervised learning finds patterns in unlabeled data.",
+                "page": 0,
+                "bbox": [
+                    100,
+                    620,
+                    900,
+                    740
+                ],
+                "confidence": 0.91
+            }
+        ],
+        "pages": [
+            {
+                "page": 0,
+                "width": 1000,
+                "height": 1414
+            }
+        ],
+        "assets": {
+            "markdown": {
+                "type": "markdown",
+                "path": "session_123/markdown_data/markdown.0_5.md",
+                "bucket": "vlm-files"
+            }
+        }
+    },
+    "edited_parse_result": {
+        "doc_id": "456",
+        "metadata": {
+            "parser": "VLMParser",
+            "mime_type": "application/pdf",
+            "generated_at": 1737216000000,
+            "page_count": 5,
+            "char_count": 1280
+        },
+        "blocks": [
+            {
+                "id": "1001",
+                "type": "heading",
+                "content": "Introduction to Machine Learning & AI",
+                "page": 0,
+                "bbox": [
+                    100,
+                    100,
+                    900,
+                    180
+                ],
+                "confidence": 0.95,
+                "attrs": {
+                    "level": 1
+                }
+            },
+            {
+                "id": "1002",
+                "type": "text",
+                "content": "Machine learning is a powerful subset of artificial intelligence that enables systems to automatically learn and improve from experience without explicit programming. This revolutionary field has transformed how we approach problem-solving.",
+                "page": 0,
+                "bbox": [
+                    100,
+                    200,
+                    900,
+                    320
+                ],
+                "confidence": 0.92
+            },
+            {
+                "id": "1003",
+                "type": "heading",
+                "content": "Core Learning Paradigms",
+                "page": 0,
+                "bbox": [
+                    100,
+                    350,
+                    900,
+                    420
+                ],
+                "confidence": 0.94,
+                "attrs": {
+                    "level": 2
+                }
+            },
+            {
+                "id": "1004",
+                "type": "list",
+                "content": "Supervised Learning\nUnsupervised Learning\nReinforcement Learning\nSemi-supervised Learning",
+                "page": 0,
+                "bbox": [
+                    100,
+                    450,
+                    900,
+                    650
+                ],
+                "confidence": 0.90,
+                "attrs": {
+                    "list_type": "unordered",
+                    "list_items": [
+                        {
+                            "text": "Supervised Learning12"
+                        },
+                        {
+                            "text": "Unsupeised Learning"
+                        },
+                        {
+                            "text": "Reinforcement Learning"
+                        },
+                        {
+                            "text": "Semi-supervised Learning"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "1006",
+                "type": "text",
+                "content": "Understanding these paradigms is crucial for selecting the right approach for your specific problem domain.",
+                "page": 0,
+                "bbox": [
+                    100,
+                    670,
+                    900,
+                    760
+                ],
+                "confidence": 0.93
+            }
+        ],
+        "pages": [
+            {
+                "page": 0,
+                "width": 1000,
+                "height": 1414
+            }
+        ],
+        "assets": {
+            "markdown": {
+                "type": "markdown",
+                "path": "session_123/markdown_data/markdown.0_5.md",
+                "bucket": "vlm-files"
+            }
+        }
+    },
+    "created_at": 1737216000,
+    "updated_at": 1737219600
+}

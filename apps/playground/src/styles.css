@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "../../../packages/ui/src/styles/globals.css";
+
+@source "./**/*.{ts,tsx}";
+@source "../../../packages/ui/src/**/*.{ts,tsx}";
+
+:root {
+  --pg-bg: #f2f0ea;
+  --pg-rail: #fbfaf6;
+  --pg-ink: #17201b;
+  --pg-muted: #6b736d;
+  --pg-line: #d8d2c4;
+  --pg-soft: #fffdf7;
+  --pg-accent: #21a67a;
+  color-scheme: light;
+  font-family:
+    "Avenir Next", "Gill Sans", "Trebuchet MS", ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--pg-bg);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}

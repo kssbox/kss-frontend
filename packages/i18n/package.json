@@ -1,0 +1,14 @@
+{
+  "name": "@kssbox/i18n",
+  "version": "0.1.0",
+  "description": "Kssbox i18n design notes. Not published until implementation source is added.",
+  "main": "index.js",
+  "author": "Kevin brother",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kssbox/kss-frontend.git",
+    "directory": "packages/i18n"
+  }
+}

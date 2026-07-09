@@ -1,16 +1,26 @@
 # kss-frontend
 
-## 前端通用库
+Kssbox frontend base packages.
 
-# 安装
+## Packages
 
+- `@kssbox/ui`: shadcn-style React UI component library.
+- `@kssbox/eslint-config`: shared ESLint flat configs.
+- `@kssbox/tsconfig`: shared TypeScript configs.
+- `@kssbox/build-config`: shared tsup and Vite config helpers.
+- `@kssbox/i18n`: documentation-only for now; not published until implementation source is added.
+
+## Install
+
+```bash
+pnpm add @kssbox/ui
 ```
-npm install @kss-frontend/lint
+
+## Development
+
+```bash
+pnpm install
+pnpm build
+pnpm type-check
+pnpm lint
 ```
-
-## TODO
-
-[ ] template
-    - [ ] husky
-    - [ ] lint
-    - [ ] changelog?

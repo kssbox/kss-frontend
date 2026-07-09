@@ -1,0 +1,60 @@
+{
+  "dataTable": {
+    "pagination": {
+      "rowsPerPage": "Rows per page",
+      "page": "Page",
+      "of": "of",
+      "selected": "row(s) selected",
+      "total": "Total",
+      "goToFirstPage": "Go to first page",
+      "goToPreviousPage": "Go to previous page",
+      "goToNextPage": "Go to next page",
+      "goToLastPage": "Go to last page"
+    },
+    "toolbar": {
+      "resetFilters": "Reset filters",
+      "reset": "Reset",
+      "filters": "Filters",
+      "toggleFilters": "Toggle filters",
+      "searchFilters": "Search filters"
+    },
+    "view": {
+      "columns": "View",
+      "toggleColumns": "Toggle columns",
+      "searchColumns": "Search columns",
+      "noResultsFound": "No columns found"
+    },
+    "filter": {
+      "clearFilter": "Clear {{name}} filter",
+      "noFiltersFound": "No filters found",
+      "selected": "selected",
+      "clearFilters": "Clear filters"
+    },
+    "facetedFilter": {
+      "clearFilter": "Clear {{name}} filter",
+      "noResultsFound": "No results found",
+      "selected": "selected",
+      "clearFilters": "Clear filters"
+    },
+    "dateFilter": {
+      "selectDateRange": "Select date range",
+      "selectDate": "Select date"
+    },
+    "sliderFilter": {
+      "clearFilter": "Clear {{name}} filter",
+      "from": "From",
+      "to": "to",
+      "sliderLabel": "{{name}} slider",
+      "clear": "Clear"
+    },
+    "columnHeader": {
+      "asc": "Asc",
+      "desc": "Desc",
+      "resetSort": "Reset",
+      "hideColumn": "Hide"
+    },
+    "empty": "No results found.",
+    "error": "Failed to load data.",
+    "search": "Search..."
+  }
+}

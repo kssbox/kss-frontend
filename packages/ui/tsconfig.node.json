@@ -1,0 +1,4 @@
+{
+  "extends": "@kssbox/tsconfig/node.json",
+  "include": ["tsup.config.ts"]
+}

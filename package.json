@@ -1,42 +1,32 @@
 {
   "name": "kss-frontend",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kssbox frontend base packages.",
   "scripts": {
-    "build": "lerna run build",
-    "lint-staged": "lint-staged",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -l",
-    "publish:latest": "lerna publish --no-private --force-publish eslint-plugin && lerna publish --no-private --force-publish lint",
-    "publish:next": "lerna publish --no-private --force-publish --dist-tag next",
-    "prepare": "husky"
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint -- --fix",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean",
+    "pre-commit": "lint-staged",
+    "reset": "pnpm run clean && rm -rf node_modules **/node_modules && pnpm install"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kevin brother",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@rollup/plugin-commonjs": "^23.0.7",
-    "@rollup/plugin-json": "^5.0.2",
-    "@rollup/plugin-node-resolve": "^15.1.0",
-    "@rollup/plugin-url": "^8.0.1",
-    "@svgr/rollup": "^6.5.1",
-    "conventional-changelog-cli": "^5.0.0",
-    "husky": "^9.1.6",
-    "lerna": "8.1.9",
-    "lint-staged": "^15.2.10",
-    "rollup": "^3.25.2",
-    "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-multi-input": "^1.4.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "rollup-plugin-uglify": "^6.0.4",
-    "rollup-plugin-visualizer": "^5.9.2"
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@types/node": "catalog:",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.20.6",
+    "turbo": "^2.0.0",
+    "typescript": "catalog:"
   },
+  "packageManager": "pnpm@9.12.3",
   "lint-staged": {
-    "packages/**/*.{mjs,cjs,tsx,ts}": "eslint",
-    "packages/**/*.less": "stylelint"
+    "packages/**/*.{mjs,cjs,tsx,ts}": "eslint"
   }
 }

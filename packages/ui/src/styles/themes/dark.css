@@ -1,0 +1,434 @@
+/**
+ * Theme: dark
+ * Kssbox Official-Site-Aligned Dark Mode
+ *
+ * 视觉基因 100% 继承官网 marketing 站：
+ *   - 背景：#0A0A14 → #13132A → #0A0A14 对角微光渐变
+ *   - 卡片：白色半透明 + 毛玻璃质感，bg-white/5 + border-white/10
+ *   - 品牌锚点：金熊品牌紫 var(--brand-primary) 雷打不动
+ *   - 字体：Inter / 系统字体栈
+ *
+ * 变量契约：与 default.css 完全一致，确保 base.css 映射层无感切换。
+ */
+
+/* ============================================================ */
+/* foundations/colors — palette overrides for dark surfaces      */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  /* Neutral palette inverted for dark canvas */
+  --color-neutral-50:  #FFFFFF;
+  --color-neutral-100: rgba(255, 255, 255, 0.92);
+  --color-neutral-200: rgba(255, 255, 255, 0.72);
+  --color-neutral-300: rgba(255, 255, 255, 0.56);
+  --color-neutral-400: rgba(255, 255, 255, 0.40);
+  --color-neutral-500: rgba(255, 255, 255, 0.28);
+  --color-neutral-600: rgba(255, 255, 255, 0.16);
+  --color-neutral-700: rgba(255, 255, 255, 0.10);
+  --color-neutral-800: rgba(255, 255, 255, 0.06);
+  --color-neutral-900: #110F1C;
+  --color-neutral-950: #0A0A14;
+
+  /* Primary palette tinted to brand purple */
+  --color-primary-50:  rgba(147, 51, 234, 0.08);
+  --color-primary-100: rgba(147, 51, 234, 0.14);
+  --color-primary-200: rgba(147, 51, 234, 0.22);
+  --color-primary-300: rgba(147, 51, 234, 0.32);
+  --color-primary-400: #A855F7;   /* purple-500 */
+  --color-primary-500: #9333EA;   /* purple-600  ← brand */
+  --color-primary-600: #7E22CE;   /* purple-700 */
+  --color-primary-700: #6B21A8;   /* purple-800 */
+  --color-primary-800: #581C87;   /* purple-900 */
+  --color-primary-900: #3B0764;
+  --color-primary-950: #2A0547;
+
+  /* Semantic colors — cool / mint shift to harmonise with purple base */
+  --color-semantic-success-50: rgba(52, 211, 153, 0.10);
+  --color-semantic-success-100: rgba(52, 211, 153, 0.18);
+  --color-semantic-success-500: #34D399;   /* emerald-400 mint */
+  --color-semantic-success-600: #10B981;
+  --color-semantic-success-900: #064E3B;
+
+  --color-semantic-error-50: rgba(244, 114, 182, 0.10);
+  --color-semantic-error-100: rgba(244, 114, 182, 0.18);
+  --color-semantic-error-500: #F472B6;     /* cool rose */
+  --color-semantic-error-600: #E879A6;
+  --color-semantic-error-900: #831843;
+
+  --color-semantic-warning-50: rgba(251, 191, 36, 0.10);
+  --color-semantic-warning-100: rgba(251, 191, 36, 0.18);
+  --color-semantic-warning-500: #FBBF24;
+  --color-semantic-warning-600: #F59E0B;
+  --color-semantic-warning-900: #78350F;
+
+  --color-semantic-info-50: rgba(129, 140, 248, 0.10);
+  --color-semantic-info-100: rgba(129, 140, 248, 0.18);
+  --color-semantic-info-500: #818CF8;       /* indigo-400 */
+  --color-semantic-info-600: #6366F1;
+  --color-semantic-info-900: #312E81;
+}
+
+/* ============================================================ */
+/* foundations/radius & spacing & typography                     */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  --radius-none: 0;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+  --radius: var(--radius-lg);
+
+  --spacing-0: 0;
+  --spacing-0-5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1-5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-2-5: 0.625rem;
+  --spacing-3: 0.75rem;
+  --spacing-3-5: 0.875rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+
+  --font-family-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-size-base: 16px;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+}
+
+/* ============================================================ */
+/* semantics/feedback                                            */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  --feedback-success: #22C55E;
+  --feedback-success-foreground: #FFFFFF;
+  --feedback-success-bg: rgba(34, 197, 94, 0.12);
+  --feedback-success-border: rgba(34, 197, 94, 0.35);
+
+  --feedback-error: #F87171;
+  --feedback-error-foreground: #FFFFFF;
+  --feedback-error-bg: rgba(239, 68, 68, 0.12);
+  --feedback-error-border: rgba(239, 68, 68, 0.35);
+
+  --feedback-warning: #FBBF24;
+  --feedback-warning-foreground: #0A0A14;
+  --feedback-warning-bg: rgba(245, 158, 11, 0.12);
+  --feedback-warning-border: rgba(245, 158, 11, 0.35);
+
+  --feedback-info: #A5B4FC;
+  --feedback-info-foreground: #FFFFFF;
+  --feedback-info-bg: rgba(99, 102, 241, 0.14);
+  --feedback-info-border: rgba(99, 102, 241, 0.40);
+}
+
+/* ============================================================ */
+/* semantics/states — interactive                                */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  /* Primary: 锚定品牌紫，与 light 保持完全一致 */
+  --interactive-primary: var(--brand-primary);
+  --interactive-primary-foreground: var(--brand-primary-foreground);
+  --interactive-primary-hover: #A855F7;
+  --interactive-primary-active: var(--brand-primary-active);
+  --interactive-primary-disabled: rgba(255, 255, 255, 0.10);
+  --interactive-primary-disabled-foreground: rgba(255, 255, 255, 0.35);
+
+  /* Secondary：半透明白色浮层（毛玻璃） */
+  --interactive-secondary: rgba(255, 255, 255, 0.06);
+  --interactive-secondary-foreground: rgba(255, 255, 255, 0.92);
+  --interactive-secondary-hover: rgba(255, 255, 255, 0.10);
+  --interactive-secondary-active: rgba(255, 255, 255, 0.14);
+  --interactive-secondary-disabled: rgba(255, 255, 255, 0.04);
+  --interactive-secondary-disabled-foreground: rgba(255, 255, 255, 0.30);
+
+  /* Destructive */
+  --interactive-destructive: #EF4444;
+  --interactive-destructive-foreground: #FFFFFF;
+  --interactive-destructive-hover: #F87171;
+  --interactive-destructive-active: #DC2626;
+  --interactive-destructive-disabled: rgba(239, 68, 68, 0.30);
+
+  /* Borders */
+  --border-default: rgba(255, 255, 255, 0.10);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  --border-focus: var(--brand-primary);
+  --border-strong: rgba(255, 255, 255, 0.24);
+
+  /* Focus Ring */
+  --ring: var(--brand-primary);
+  --ring-offset: #0A0A14;
+}
+
+/* ============================================================ */
+/* semantics/surfaces — backgrounds, cards, sidebar              */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  /* 页面背景：曜石暗紫黑——不是纯黑，注入约 6% 紫色 hue */
+  --surface-background: #0F0D1F;
+  --surface-foreground: rgba(232, 230, 248, 0.94);
+
+  /* 卡片：极弱白色叠层 + 细描边，让卡片干净「浮」起来 */
+  --surface-card: rgba(255, 255, 255, 0.035);
+  --surface-card-foreground: rgba(232, 230, 248, 0.94);
+
+  /* Popover/Modal：稍深紫浮层 */
+  --surface-popover: #181530;
+  --surface-popover-foreground: rgba(232, 230, 248, 0.94);
+
+  /* Muted：低对比度区块（表头、placeholder 区）— 同基底叠浅紫 */
+  --surface-muted: rgba(255, 255, 255, 0.045);
+  --surface-muted-foreground: rgba(200, 200, 230, 0.62);
+
+  /* Accent：hover / 行高亮 — 微弱紫光 */
+  --surface-accent: rgba(147, 51, 234, 0.10);
+  --surface-accent-foreground: rgba(245, 243, 255, 0.96);
+
+  /* Sidebar：与主背景统一冷紫色族，仅亮度略低 */
+  --sidebar-bg: #0D0B1B;
+  --sidebar-fg: rgba(232, 230, 248, 0.85);
+  --sidebar-icon-fg: rgba(214, 214, 235, 0.72);
+  --sidebar-icon-hover-fg: #FFFFFF;
+  --sidebar-icon-hover-bg: rgba(147, 51, 234, 0.10);
+  --sidebar-icon-active-bg: rgba(255, 255, 255, 0.05);
+  --sidebar-icon-active-fg: #FFFFFF;
+  --sidebar-icon-active-border: rgba(255, 255, 255, 0.08);
+
+  --sidebar-primary: var(--brand-primary);
+  --sidebar-primary-fg: #FFFFFF;
+  --sidebar-accent: rgba(255, 255, 255, 0.05);
+  --sidebar-accent-fg: #FFFFFF;
+  --sidebar-border: rgba(255, 255, 255, 0.05);
+  --sidebar-ring: var(--brand-primary);
+}
+
+/* ============================================================ */
+/* components/button                                             */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  --button-primary-bg: var(--interactive-primary);
+  --button-primary-fg: var(--interactive-primary-foreground);
+  --button-primary-border: transparent;
+  --button-primary-hover-bg: var(--interactive-primary-hover);
+  --button-primary-active-bg: var(--interactive-primary-active);
+  --button-primary-disabled-bg: var(--interactive-primary-disabled);
+  --button-primary-disabled-fg: var(--interactive-primary-disabled-foreground);
+
+  --button-secondary-bg: var(--interactive-secondary);
+  --button-secondary-fg: var(--interactive-secondary-foreground);
+  --button-secondary-border: var(--border-default);
+  --button-secondary-hover-bg: var(--interactive-secondary-hover);
+  --button-secondary-active-bg: var(--interactive-secondary-active);
+  --button-secondary-disabled-bg: var(--interactive-secondary-disabled);
+  --button-secondary-disabled-fg: var(--interactive-secondary-disabled-foreground);
+
+  --button-outline-bg: transparent;
+  --button-outline-fg: rgba(255, 255, 255, 0.92);
+  --button-outline-border: var(--border-default);
+  --button-outline-hover-bg: rgba(255, 255, 255, 0.05);
+  --button-outline-hover-border: var(--border-hover);
+  --button-outline-active-bg: rgba(255, 255, 255, 0.08);
+  --button-outline-disabled-fg: rgba(255, 255, 255, 0.30);
+
+  --button-ghost-bg: transparent;
+  --button-ghost-fg: rgba(255, 255, 255, 0.92);
+  --button-ghost-hover-bg: rgba(255, 255, 255, 0.06);
+  --button-ghost-active-bg: rgba(255, 255, 255, 0.10);
+  --button-ghost-disabled-fg: rgba(255, 255, 255, 0.30);
+
+  --button-destructive-bg: var(--interactive-destructive);
+  --button-destructive-fg: var(--interactive-destructive-foreground);
+  --button-destructive-border: transparent;
+  --button-destructive-hover-bg: var(--interactive-destructive-hover);
+  --button-destructive-active-bg: var(--interactive-destructive-active);
+  --button-destructive-disabled-bg: var(--interactive-destructive-disabled);
+
+  --button-link-fg: #C4B5FD;             /* purple-300 */
+  --button-link-hover-fg: #DDD6FE;
+  --button-link-active-fg: #A78BFA;
+
+  --button-radius: var(--radius);
+  --button-padding-x: var(--spacing-4);
+  --button-padding-y: var(--spacing-2);
+}
+
+/* ============================================================ */
+/* components/chart                                              */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  --chart-1: #A855F7;
+  --chart-2: #6366F1;
+  --chart-3: #22D3EE;
+  --chart-4: #F472B6;
+  --chart-5: #FBBF24;
+}
+
+/* ============================================================ */
+/* components/data-table                                         */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  --table-header-bg: rgba(255, 255, 255, 0.04);
+  --table-header-fg: rgba(255, 255, 255, 0.88);
+  --table-header-border: rgba(255, 255, 255, 0.08);
+  --table-header-font-weight: var(--font-weight-medium);
+
+  --table-row-bg: transparent;
+  --table-row-hover-bg: rgba(147, 51, 234, 0.08);
+  --table-row-selected-bg: rgba(147, 51, 234, 0.16);
+  --table-row-striped-bg: rgba(255, 255, 255, 0.02);
+  --table-row-border: rgba(255, 255, 255, 0.06);
+
+  --table-cell-fg: rgba(255, 255, 255, 0.85);
+  --table-cell-padding-x: var(--spacing-4);
+  --table-cell-padding-y: var(--spacing-3);
+
+  --table-footer-bg: transparent;
+  --table-footer-fg: rgba(255, 255, 255, 0.55);
+  --table-footer-border: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================================ */
+/* components/input                                              */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  --input-bg: rgba(255, 255, 255, 0.04);
+  --input-fg: rgba(255, 255, 255, 0.92);
+  --input-border: rgba(255, 255, 255, 0.10);
+  --input-placeholder: rgba(255, 255, 255, 0.40);
+
+  --input-hover-border: rgba(255, 255, 255, 0.20);
+  --input-focus-border: var(--brand-primary);
+  --input-focus-ring: var(--brand-ring);
+  --input-disabled-bg: rgba(255, 255, 255, 0.02);
+  --input-disabled-fg: rgba(255, 255, 255, 0.35);
+  --input-disabled-border: rgba(255, 255, 255, 0.06);
+
+  --input-filled-bg: rgba(255, 255, 255, 0.06);
+  --input-filled-hover-bg: rgba(255, 255, 255, 0.08);
+  --input-filled-focus-bg: rgba(255, 255, 255, 0.05);
+
+  --input-radius: var(--radius);
+  --input-padding-x: 0.75rem;
+  --input-padding-y: 0.5rem;
+  --input-height: 2.5rem;
+}
+
+/* ============================================================ */
+/* components/switch                                             */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  --switch-bg: rgba(255, 255, 255, 0.26);
+  --switch-border: rgba(255, 255, 255, 0.28);
+  --switch-thumb-bg: rgba(255, 255, 255, 0.66);
+  --switch-checked-thumb-bg: #FFFFFF;
+}
+
+/* ============================================================ */
+/* components/toast                                              */
+/* ============================================================ */
+
+:root[data-theme='dark'] {
+  --toast-bg: #16142A;
+  --toast-fg: rgba(255, 255, 255, 0.92);
+  --toast-border: rgba(255, 255, 255, 0.10);
+  --toast-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.50), 0 4px 16px -4px rgba(147, 51, 234, 0.12);
+
+  --toast-success-bg: rgba(34, 197, 94, 0.14);
+  --toast-success-fg: #BBF7D0;
+  --toast-success-border: rgba(34, 197, 94, 0.40);
+
+  --toast-error-bg: rgba(239, 68, 68, 0.14);
+  --toast-error-fg: #FECACA;
+  --toast-error-border: rgba(239, 68, 68, 0.40);
+
+  --toast-warning-bg: rgba(245, 158, 11, 0.14);
+  --toast-warning-fg: #FDE68A;
+  --toast-warning-border: rgba(245, 158, 11, 0.40);
+
+  --toast-info-bg: rgba(99, 102, 241, 0.14);
+  --toast-info-fg: #C7D2FE;
+  --toast-info-border: rgba(99, 102, 241, 0.40);
+
+  --normal-bg: var(--toast-bg);
+  --normal-text: var(--toast-fg);
+  --normal-border: var(--toast-border);
+
+  --toast-radius: var(--radius);
+  --toast-padding: 1rem;
+}
+
+/* ============================================================ */
+/* Body background — 官网同款对角微光渐变                          */
+/* ============================================================ */
+
+html:root[data-theme='dark'],
+html:root[data-theme='dark'] body {
+  /* 极弱对角紫光晕染，避免大面积亮紫块，整体保持沉浸暗紫黑 */
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(147, 51, 234, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 100%, rgba(99, 102, 241, 0.06) 0%, transparent 60%),
+    #0F0D1F;
+  background-attachment: fixed;
+  color: var(--surface-foreground);
+}
+
+/* 滚动条调和到暗色 */
+html:root[data-theme='dark'] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+html:root[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 5px;
+}
+html:root[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 51, 234, 0.40);
+}
+html:root[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 文字选中 */
+html:root[data-theme='dark'] ::selection {
+  background: rgba(147, 51, 234, 0.40);
+  color: #FFFFFF;
+}
